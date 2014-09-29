@@ -1,5 +1,5 @@
  
-function fish_default_key_bindings -d "Default (Emacs-like) key bindings for fish"
+function fish_default_key_bindings -d "Ergo-Emacs likfe key bindings for fish"
 
 	# Clear earlier bindings, if any
 	bind --erase --all
@@ -9,35 +9,10 @@ function fish_default_key_bindings -d "Default (Emacs-like) key bindings for fis
 	
 	bind \e\n "commandline -i \n"
 
-	bind \e\[H beginning-of-line
-	bind \e\[F end-of-line
-
 	# OS X SnowLeopard doesn't have these keys. Don't show an annoying error message.
 	bind -k home beginning-of-line 2> /dev/null
 	bind -k end end-of-line 2> /dev/null
 	bind \e\[3\;2~ backward-delete-char # Mavericks Terminal.app shift-delete
-
-	bind \e\eOC nextd-or-forward-word
-	bind \e\eOD prevd-or-backward-word
-	bind \e\e\[C nextd-or-forward-word
-	bind \e\e\[D prevd-or-backward-word
-	bind \eO3C nextd-or-forward-word
-	bind \eO3D prevd-or-backward-word
-	bind \e\[3C nextd-or-forward-word
-	bind \e\[3D prevd-or-backward-word
-	bind \e\[1\;3C nextd-or-forward-word
-	bind \e\[1\;3D prevd-or-backward-word
-
-	bind \e\eOA history-token-search-backward
-	bind \e\eOB history-token-search-forward
-	bind \e\e\[A history-token-search-backward
-	bind \e\e\[B history-token-search-forward
-	bind \eO3A history-token-search-backward
-	bind \eO3B history-token-search-forward
-	bind \e\[3A history-token-search-backward
-	bind \e\[3B history-token-search-forward
-	bind \e\[1\;3A history-token-search-backward
-	bind \e\[1\;3B history-token-search-forward
 
 	bind \eu upcase-word
 	# This clashes with __fish_list_current_token
@@ -87,7 +62,7 @@ function fish_default_key_bindings -d "Default (Emacs-like) key bindings for fis
 	bind [B down-or-search
 	bind [A up-or-search
 
-	bind \er forward-kill-word
+	bind \er kill-word
 	bind \ee backward-kill-word
 	bind \ed backward-delete-char
 	bind \ef delete-char
@@ -110,12 +85,16 @@ function fish_default_key_bindings -d "Default (Emacs-like) key bindings for fis
 	bind \n execute
 	bind -k enter execute
 	
-	# bind \ei history-search-backward
-	# bind \ek history-search-forward
 
-	# conflicted bindings
-	# bind \el __fish_list_current_token
-	# bind \ct transpose-chars
-	# bind \et transpose-words
-	
+
+	# TODO: still unbound
+	# __fish_list_current_token
+	# transpose-chars
+	# transpose-words
+	# history-search-backward
+	# history-search-forward
+	# history-token-search-forward
+	# history-token-search-backward
+	# nextd-or-forward-word
+	# prevd-or-backward-word
 end
