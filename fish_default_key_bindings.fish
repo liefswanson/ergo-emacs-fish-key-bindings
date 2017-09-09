@@ -1,5 +1,5 @@
  
-function fish_default_key_bindings -d "Ergo-Emacs likfe key bindings for fish"
+function fish_default_key_bindings -d "Ergo-Emacs like key bindings for fish"
 
 	# Clear earlier bindings, if any
 	bind --erase --all
