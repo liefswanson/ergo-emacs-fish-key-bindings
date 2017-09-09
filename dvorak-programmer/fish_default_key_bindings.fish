@@ -81,7 +81,7 @@ function fish_default_key_bindings -d "Ergo-Emacs like key bindings for fish"
 	bind \ek yank
 
 	bind \cj complete
-	bind \n execute
+	bind \cM execute
 	bind -k enter execute
 
 
