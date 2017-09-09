@@ -3,7 +3,7 @@ ergo-emacs-fish-key-bindings
 
 A set of Ergo-Emacs like bindings for the fish shell. (WIP)
 
-Simply put the correpsonding file for your layout in ~/home/{$username}/.config/fish/functions/fish_default_key_bindings.fish
+Simply put the correpsonding file for your layout in ~/.config/fish/functions/fish_default_key_bindings.fish
 
 Fish will prefer it over the system wide default, due to load order preferences
 
